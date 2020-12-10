@@ -124,13 +124,13 @@
 	<script>
 		$(document).ready(function(){
 
+			var img_count=false 
 			var submit_flag = [0, 0, 0, 0, 0, 0]
 
 			//국어
 			$('.submit_kor').click(function(){ // 등급에 버튼을 클릭 시
 				$.ajax('kor',{ success: function(data){ // ajax(get요청)을 하고 성공 시 data를 받아오고 함수를 실행
-						// 등급의 버튼에 있는 텍스트를 입력한 점수와 data(등급컷 배열)를 비교한 결과 값(등급)으로 바꿈
-						$('.submit_kor').html( cal( $('.score_kor').val(), data ) )
+						$('.submit_kor').html( cal( $('.score_kor').val(), data ) ) // 등급의 버튼에 있는 텍스트를 입력한 점수와 data(등급컷 배열)를 비교한 결과 값(등급)으로 바꿈
 					}
 				})
 				submit_flag[0]=1;
@@ -138,7 +138,7 @@
 
 			//수학
 			$('.submit_math').click(function(){
-				$.ajax($('.list_math').val(), { success: function(data){
+				$.ajax($('.list_math').val(), { success: function(data){ // list_math는 수학가, 수학나가 있는 Dropdown임. 선택된 값(value)으로 라우팅해서 GET요청함
 						$('.submit_math').html( cal($('.score_math').val(), data) )
 					}
 				})
@@ -183,13 +183,22 @@
 
 			$('.btn').click(function(){
 				if((submit_flag[0]+submit_flag[1]+submit_flag[2]+submit_flag[3]+submit_flag[4]+submit_flag[5])==6){
-					$('<img src="img1.png" />').appendTo('body')
+					if(img_count==false){
+					$('<img src="img1.png" />').appendTo('body') // 모든 등급이 표시되면 이미지를 넣음
+					img_count=true; // 이미지가 한 번 들어가면 버튼을 클릭해도 또 이미지를 넣지 않음.
+					}
 				}
 			})
 
 			setInterval(function(){
-				$('img').css('opacity',Number($('img').css('opacity'))+0.005),100 })
+				$('img').css('opacity',Number($('img').css('opacity'))+0.005),100 }) // 이미지는 투명도가 0으로 세팅되어있음. 점점 이미지가 선명해지면서 시각적 효과를 살리기 위함.
 
+			$('input').keyup(function(){ 
+				if(isNaN($(this).val())==true) // input(점수) 자리에 숫자가 아닌 다른 값이 들어가면 글자색을 빨간색으로 표시
+					$(this).css('color','red') 
+				else
+					$(this).css('color','black')
+			})
 
 			//end - $(document).ready(function(){})
 		})
