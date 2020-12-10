@@ -1,13 +1,17 @@
 <html>
 <head>
-<title>2021 수능 등급 계산기</title>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous">	
+ <title>2021 수능 등급 계산기</title>
+  <meta charset="utf-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1"> 
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css"> 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.6/umd/popper.min.js"></script> 
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js"></script> 
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous">	
 </script>
+
 <style>
 	button{width:140px;}
 	select{width:140px; text-align-last:center;}
@@ -15,157 +19,198 @@
 	body{margin-top:40px;}
 	table,tr,th,td{border-collapse: collapse; border: 2px solid #8C8C8C;}
 	optgroup{color:black;}
+	img{display:block; margin: 0px auto; opacity:0;}
+	body{background: #FFFFFF;}
 </style>
+
 </head>
+
 <body>
-<h1 style="text-align:center">수능 등급 계산기</h1>
-<br>
-<div class="row">
+	<h1 style="text-align:center">수능 등급 계산기</h1><br>
+	<div class="row">
 	<div class="col-sm-3">
-		<table class="table">
-		<tr>
-			<th>
-				과목
-			</th>
-			<th>
-				점수
-			</th>
-			<th>
-				등급
-			</th>
-		</tr>
+	<table class="table">
+			<tr>
+				<th>과목</th>
+				<th>점수</th>
+				<th>등급</th>
+			</tr>
 		<tbody>
-		<tr class="table-primary">
-			<td>
-				<button class="btn btn-primary">국어</button>
-			</td>
-			<td>
-				<form class="form-inline" role="form">
-					<input type="text" class="form-control" size=1 maxlength=3 placeholder="점수">
-				</form>
-			</td>
-			<td>
-				<button type="button" class="btn btn-outline-primary" style="width:40">?
-			</td>
-		</tr>
-		<tr class="table-success">
-			<td>
-				<select class="btn btn-success">
-					<option>수학 가</option>
-					<option>수학 나</option>
-				</select>
-			</td>
-			<td>
-				<form class="form-inline" role="form">
-					<input type="text" class="form-control" size=1 maxlength=3 placeholder="점수">
-				</form>
-			</td>
-			<td>
-				<button type="button" class="btn btn-outline-success" style="width:40">?
-			</td>
-		</tr>
-		<tr class="table-danger">
-			<td>
-				<button class="btn btn-danger">영어</button>
-			</td>
-			<td>
-				<form class="form-inline" role="form">
-					<input type="text" class="form-control" size=1 maxlength=3 placeholder="점수">
-				</form>
-			</td>
-			<td>
-				<button type="button" class="btn btn-outline-danger" style="width:40">?
-			</td>
-		</tr>
-		<tr class="table-warning">
-			<td>
-				<button class="btn btn-warning">한국사</button>
-			</td>
-			<td>
-				<form class="form-inline" role="form">
-					<input type="text" class="form-control" size=1 maxlength=3 placeholder="점수">
-				</form>
-			</td>
-			<td>
-				<button type="button" class="btn btn-outline-warning" style="width:40">?
-			</td>
-		</tr>
-		<tr class="table-info">
-			<td>
-				<select class="btn btn-info">
-					<optgroup label="＃사회탐구"></optgroup>
-					<option selected disabled hidden> 탐구 1 </option>
-					<option>생활과 윤리</option>
-					<option>윤리와 사상</option>
-					<option>한국지리</option>
-					<option>세계지리</option>
-					<option>동아시아사</option>
-					<option>세계사</option>
-					<option>정치와법</option>
-					<option>경제</option>
-					<option>사회문화</option>
-					<optgroup label="＃과학탐구"></optgroup>
-					<option>물리학1</option>
-					<option>화학1</option>
-					<option>생명과학1</option>
-					<option>지구과학1</option>
-					<option>물리학2</option>
-					<option>화학2</option>
-					<option>생명과학2</option>
-					<option>지구과학2</option>
-				</select>
-			</td>
-			<td>
-				<form class="form-inline" role="form">
-					<input type="text" class="form-control" size=1 maxlength=3 placeholder="점수">
-				</form>
-			</td>
-			<td>
-				<button type="button" class="btn btn-outline-info" style="width:40">?
-			</td>
-		</tr>
-		<tr class="table-info">
-			<td>
-				<select class="btn btn-info">
-					<optgroup label="＃사회탐구"></optgroup>
-					<option selected disabled hidden> 탐구 2 </option>
-					<option>생활과 윤리</option>
-					<option>윤리와 사상</option>
-					<option>한국지리</option>
-					<option>세계지리</option>
-					<option>동아시아사</option>
-					<option>세계사</option>
-					<option>정치와법</option>
-					<option>경제</option>
-					<option>사회문화</option>
-					<optgroup label="＃과학탐구"></optgroup>
-					<option>물리학1</option>
-					<option>화학1</option>
-					<option>생명과학1</option>
-					<option>지구과학1</option>
-					<option>물리학2</option>
-					<option>화학2</option>
-					<option>생명과학2</option>
-					<option>지구과학2</option>
-				</select>
-			</td>
-			<td>
-				<form class="form-inline" role="form">
-					<input type="text" class="form-control" size=1 maxlength=3 placeholder="점수">
-				</form>
-			</td>
-			<td>
-				<button type="button" class="btn btn-outline-info" style="width:40">?
-			</td>
-		</tr>
+			<tr class="table-primary">
+				<td><button class="btn btn-primary">국어</button></td>
+				<td><form class="form-inline" role="form"><input type="text" class="form-control score_kor" size=1 maxlength=3 placeholder="점수"></form></td>
+				<td><button type="button" class="btn btn-outline-primary submit_kor" style="width:40">?</td>
+			</tr>
+			<tr class="table-success">
+				<td>
+						<select class="btn btn-success list_math">
+							<option value="math_a">수학 가</option>
+							<option value="math_b">수학 나</option>
+						</select>
+				</td>
+				<td><form class="form-inline" role="form"><input type="text" class="form-control score_math" size=1 maxlength=3 placeholder="점수"></form></td>
+				<td><button type="button" class="btn btn-outline-success submit_math" style="width:40">?</td>
+			</tr>
+			<tr class="table-danger">
+				<td><button class="btn btn-danger">영어</button></td>
+				<td><form class="form-inline" role="form"><input type="text" class="form-control score_eng" size=1 maxlength=3 placeholder="점수"></form></td>
+				<td><button type="button" class="btn btn-outline-danger submit_eng" style="width:40">?</td>
+			</tr>
+			<tr class="table-warning">
+				<td><button class="btn btn-warning">한국사</button></td>
+				<td><form class="form-inline" role="form"><input type="text" class="form-control score_his" size=1 maxlength=3 placeholder="점수"></form></td>
+				<td><button type="button" class="btn btn-outline-warning submit_his" style="width:40">?</td>
+			</tr>
+			<tr class="table-info">
+				<td>
+					<select class="btn btn-info list_res1">
+						<optgroup label="＃사회탐구" ></optgroup>
+							<option selected disabled hidden> 탐구 1 </option>
+							<option value="life_and_ethics">생활과 윤리</option>
+							<option value="ehtics_and_ideas">윤리와 사상</option>
+							<option value="k_geography">한국지리</option>
+							<option value="g_geography">세계지리</option>
+							<option value="e_history">동아시아사</option>
+							<option value="g_history">세계사</option>
+							<option value="politic_and_law">정치와법</option>
+							<option value="economy">경제</option>
+							<option value="social_culture">사회문화</option>
+						<optgroup label="＃과학탐구" ></optgroup>
+							<option value="physics1">물리학1</option>
+							<option value="chemistry1">화학1</option>
+							<option value="biology1">생명과학1</option>
+							<option value="earth_science1">지구과학1</option>
+							<option value="physics2">물리학2</option>
+							<option value="chemistry1">화학2</option>
+							<option value="biology2">생명과학2</option>
+							<option value="earth_science1">지구과학2</option>
+						</select></td>
+				<td><form class="form-inline" role="form"><input type="text" class="form-control score_res1" size=1 maxlength=3 placeholder="점수"></form></td>
+				<td><button type="button" class="btn btn-outline-info submit_res1" style="width:40">?</td>
+			</tr>
+			<tr class="table-info">
+				<td>
+					<select class="btn btn-info list_res2">
+						<optgroup label="＃사회탐구" ></optgroup>
+						<option selected disabled hidden> 탐구 2 </option>
+							<option value="life_and_ethics">생활과 윤리</option>
+							<option value="ehtics_and_ideas">윤리와 사상</option>
+							<option value="k_geography">한국지리</option>
+							<option value="g_geography">세계지리</option>
+							<option value="e_history">동아시아사</option>
+							<option value="g_history">세계사</option>
+							<option value="politic_and_law">정치와법</option>
+							<option value="economy">경제</option>
+							<option value="social_culture">사회문화</option>
+						<optgroup label="＃과학탐구" ></optgroup>
+							<option value="physics1">물리학1</option>
+							<option value="chemistry1">화학1</option>
+							<option value="biology1">생명과학1</option>
+							<option value="earth_science1">지구과학1</option>
+							<option value="physics2">물리학2</option>
+							<option value="chemistry1">화학2</option>
+							<option value="biology2">생명과학2</option>
+							<option value="earth_science1">지구과학2</option>
+						</select></td>
+				<td><form class="form-inline" role="form"><input type="text" class="form-control score_res2" size=1 maxlength=3 placeholder="점수"></form></td>
+				<td><button type="button" class="btn btn-outline-info submit_res2" style="width:40">?</td>
+			</tr>
 		</tbody>
-		</table>
-	</div>
+	</table>
+</div>
 </div>
 </table>
-<script>
+
+	<script>
 		$(document).ready(function(){
+
+			var submit_flag = [0, 0, 0, 0, 0, 0]
+
+			//국어
+			$('.submit_kor').click(function(){ // 등급에 버튼을 클릭 시
+				$.ajax('kor',{ success: function(data){ // ajax(get요청)을 하고 성공 시 data를 받아오고 함수를 실행
+						// 등급의 버튼에 있는 텍스트를 입력한 점수와 data(등급컷 배열)를 비교한 결과 값(등급)으로 바꿈
+						$('.submit_kor').html( cal( $('.score_kor').val(), data ) )
+					}
+				})
+				submit_flag[0]=1;
+			})
+
+			//수학
+			$('.submit_math').click(function(){
+				$.ajax($('.list_math').val(), { success: function(data){
+						$('.submit_math').html( cal($('.score_math').val(), data) )
+					}
+				})
+				submit_flag[1]=1;
+			})
+
+			//영어
+			$('.submit_eng').click(function(){
+				$.ajax('eng',{ success: function(data){
+						$('.submit_eng').html( cal( $('.score_eng').val(), data ) )
+					}
+				})
+				submit_flag[2]=1
+			})
+
+			//한국사
+			$('.submit_his').click(function(){
+				$.ajax('k_history',{ success: function(data){
+						$('.submit_his').html( cal( $('.score_his').val(), data ) )
+					}
+				})
+				submit_flag[3]=1
+			})
+
+			//탐구1
+			$('.submit_res1').click(function(){
+				$.ajax($('.list_res1').val(), { success: function(data){
+						$('.submit_res1').html( cal($('.score_res1').val(), data) )
+					}
+				})
+				submit_flag[4]=1
+			})
+
+			//탐구2
+			$('.submit_res2').click(function(){
+				$.ajax($('.list_res2').val(), { success: function(data){
+						$('.submit_res2').html( cal($('.score_res2').val(), data) )
+					}
+				})
+				submit_flag[5]=1
+			})
+
+			$('.btn').click(function(){
+				if((submit_flag[0]+submit_flag[1]+submit_flag[2]+submit_flag[3]+submit_flag[4]+submit_flag[5])==6){
+					$('<img src="img1.png" />').appendTo('body')
+				}
+			})
+
+			setInterval(function(){
+				$('img').css('opacity',Number($('img').css('opacity'))+0.005),100 })
+
+
+			//end - $(document).ready(function(){})
 		})
+
+
+
+		// 특정 과목에서 입력한 점수에 해당하는 등급을 return하는 함수
+		function cal(score, cutLineArray){
+			if(score>=cutLineArray[0]) return 1;
+			else if(score>=cutLineArray[1]) return 2;
+			else if(score>=cutLineArray[2]) return 3;
+			else if(score>=cutLineArray[3]) return 4;
+			else if(score>=cutLineArray[4]) return 5;
+			else if(score>=cutLineArray[5]) return 6;
+			else if(score>=cutLineArray[6]) return 7;
+			else if(score>=cutLineArray[7]) return 8;
+			else return 9;
+		}
+
 	</script>
+
+
 </body>
 </html>
