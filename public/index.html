@@ -191,7 +191,7 @@
 			})
 
 			setInterval(function(){
-				$('img').css('opacity',Number($('img').css('opacity'))+0.005),100 }) // 이미지는 투명도가 0으로 세팅되어있음. 점점 이미지가 선명해지면서 시각적 효과를 살리기 위함.
+				$('img').css('opacity',Number($('img').css('opacity'))+0.02)},100) // 이미지는 불투명도가 0으로 세팅되어있음. 점점 이미지가 선명해지면서 시각적 효과를 살리기 위함. 0.1초당 2%. 5초에 걸침.
 
 			$('input').keyup(function(){ 
 				if(isNaN($(this).val())==true) // input(점수) 자리에 숫자가 아닌 다른 값이 들어가면 글자색을 빨간색으로 표시
