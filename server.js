@@ -31,7 +31,7 @@ app.use(express.static('public')) // 정적 파일의 경로를 지정. 클라�
 app.get('/:id' , function(request, response){
 	var subject_name = request.params.id
 	response.send(database_cutLine[subject_name])
-}) // get요청시 해당 과목의 등급컷 배열을 넘겨줌
+}) // get요청시 날라온 과목명에 맞는 등급컷 배열을 넘겨줌
 
 var server = http.createServer(app) // http 기반 웹서버를 express 모듈을 이용해 구축
 
